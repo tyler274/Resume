@@ -1,4 +1,4 @@
-\documentclass[9pt]{article}
+\documentclass[8pt]{article}
 \usepackage{fullpage}
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -8,10 +8,10 @@
 \usepackage{hyperref}
 \usepackage[normalem]{ulem}
 
-\leftmargin=0.25in
-\oddsidemargin=0.25in
+\leftmargin=0.1in
+\oddsidemargin=0.10in
 \textwidth=6.0in
-\topmargin=-0.25in
+\topmargin=-0.15in
 \textheight=9.25in
 
 \raggedright
@@ -76,16 +76,16 @@
 % END RESUME DEFINITIONS
 
 \begin{document}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Contact Info
 \begin{center}
+	\vspace*{-48pt}
 	{\Large \scshape Tyler Alamo Port}
 \end{center}
 \vspace*{-2pt}
 \hspace{7.25mm} \faGithub \hspace{0.25mm} \textbf{\href{https://github.com/tyler274}{github.com/tyler274}} \hspace{7.25mm} \faLinkedinSquare \hspace{0.25mm} \textbf{\href{https://linkedin.com/in/tyler-port-9a795455/}{linkedin.com/in/tyler-port-9a795455}} \\
 \vspace*{3pt}  \hspace{12.25mm} \faEnvelope \hspace{0.1mm} \textbf{\href{mailto:tp@dabney.moe}{tp@dabney.moe}} \hspace{8.25mm} \faMobile : \textbf{\href{tel:+15167767470}{+1 (516) 776-7470}}\\
-\vspace{1pt}
+\vspace*{-9pt}
 \smallskip
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -93,7 +93,7 @@
 \header{Education}
 %\smallskip
 \begin{body}
-	\vspace{16pt}
+	\vspace{14pt}
 	\textbf{California Inst. of Technology [Caltech]}{}, \emph{B.S. in
 	\textbf{Computer Science}:} \hfill \emph{Jun. 2022}{} \\
 	\vspace{-3pt}
@@ -105,24 +105,25 @@
 \end{body}
 
 \smallskip
-\vspace*{-3pt}
+\vspace*{-9pt}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Experience
 \header{Work and Experience}
 %\smallskip
 \begin{body}
-	\vspace{14pt}
+	\vspace{12pt}
 	\textbf{Carl Zeiss AG., Germany}, \emph{System Software Engineer} \hfill \emph{March 2023 - }\\
-	\vspace*{-3pt}
+	\vspace*{-4pt}
 	\begin{itemize} \itemsep -0pt %reduce space between items
 		\item Subject matter expert regarding Graphics Processing Units (GPUs) and Field Programmable Gate Arrays (FPGAs)
-		\item Worked on and assisted in various projects making use of High Performance Compute.
+		\item Worked on and assisted in various projects making use of High Performance Compute in CUDA C++, SYCL, OpenCL, and Python.
+		\item Deployed and tested FPGA implementations of Pytorch models for image signals processing. 
 	\end{itemize}
-	\vspace*{-2pt}
+	\vspace*{-4pt}
  
 	\textbf{Caltech}, \emph{Lecturer and Teaching Assistant in Computer Science} \hfill \emph{April 2018 - June 2022}\\
-	\vspace*{-3pt}
+	\vspace*{-4pt}
 	\begin{itemize} \itemsep -0pt %reduce space between items
 		\item Translated and reimplemented assignments for CS24 (Operating
 		Systems) from C to Rust.
@@ -131,46 +132,66 @@
 		      (SQL) in CS121.
 		\item Taught Rust programming for the CS11 Rust language workshop.
 	\end{itemize}
-	\vspace*{-2pt}
+	\vspace*{-4pt}
 
 	\textbf{North American Partners in Anesthesia.}, \emph{Software Engineering Intern} \hfill
 	\emph{Dec 2019 - August 2020}\\
 	\vspace*{-3pt}
 	\begin{itemize} \itemsep -0pt %reduce space between items
 		\item Automated inter-database information validation between Cactus and the
-		      National Provider Database.
-		\item Assisted with automation testing and development interfacing with GUI based terminal
-		      systems for healthcare data processing.
+		      National Provider Database, and worked on integration with legacy healthcare data systems.
 	\end{itemize}
-	\vspace*{-2pt}
+	\vspace*{-4pt}
 
 	\textbf{Tinder Inc.}, \emph{Software Engineering Intern} \hfill \emph{June 2018 - August 2018}\\
 	\vspace*{-3pt}
 	\begin{itemize} \itemsep -0pt %reduce space between items
-		\item Researched and implemented a configuration that walked the graph of
+		\item Researched and implemented an extension of Prometheus and Grafana, using Python and Puppet, that walked the graph of
 		microservice dependencies to determine what services were degraded based on a dependency.
-		\item Used and extended Grafana and Prometheus to automate status page generation.
 	\end{itemize}
-	\vspace*{-2pt}
+	\vspace*{-4pt}
 
 	\textbf{NASA Jet Propulsion Lab}, \emph{Software Engineering Intern} \hfill \emph{January 2018 - June 2018}\\
 	\vspace*{-3pt}
 	\begin{itemize} \itemsep -0pt %reduce space between items
+		\item Worked on trajectory finding and visualization for the Europa Lander mission, reimplemented orbital calculations from MatLab to CUDA C++ for parallelization.
+	\end{itemize}
+	\vspace*{-4pt}
+
+	\textbf{Caltech IMSS}, \emph{IMSS Represenative and Systems Administrator} \hfill \emph{January 2016 - June 2022}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt %reduce space between items
 		\item Worked on trajectory finding and visualization for the Europa Lander mission.
 	\end{itemize}
-	\vspace*{-2pt}
+	\vspace*{-4pt}
 
 	\textbf{DoubleVerify Inc.}, \emph{Bot Fraud Analyst Intern} \hfill \emph{June 2015 - September 2015}\\
-	\vspace*{-3pt}
+	\vspace*{-4pt}
 	\begin{itemize} \itemsep -0pt %reduce space between items
 		\item Infected machines with malware and analyzed the collected network traffic for evidence of botnet based ad fraud.
 		\item Researched botnet forums for new developments in the field, especially the prevalence of voluntary botnets known as traffic exchanges, and YouTube based revenue generation.
 	\end{itemize}
-	\vspace*{-2pt}
+	\vspace*{-4pt}
+
+	\textbf{KarmaFleet}, \emph{Director of Technology} \hfill \emph{January 2015 - September 2016}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt %reduce space between items
+		\item Used Python, Flask, SQLAlchemy, and PostgreSQL to develop a web application for managing a large group of players (4500+) in the MMORPG EVE Online.
+		\item Implemented containerized deployment, continuous integration, and robust authentication and monitoring systems.
+		\item Managed voice over IP, forums, chat, and other services for the corporation. 
+	\end{itemize}
+	\vspace*{-4pt}
+
+	\textbf{GLO Gaming}, \emph{Office IT, Director of Technology} \hfill \emph{January 2012 - September 2014}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt %reduce space between items
+		\item Managed the IT infrastructure, including extension of SalesForce CRM integrations, backups, networking, security, and user support. 
+	\end{itemize}
+	\vspace*{-4pt}
 
 	\smallskip
-	\vspace*{-3pt}
-	\vspace*{-5pt}
+	\vspace*{-9pt}
+	% \vspace*{-5pt}
 	\smallskip
 \end{body}
 
@@ -185,11 +206,11 @@
 	\vspace{14pt}
 	\begin{itemize} \itemsep -0pt
 
-		\item \uline{Lanugages:} \textbf{Rust}, Python, C/C++, CUDA/OpenCL/HIP, C\#, Haskell, VHDL, OCaml, Javascript, SQL, Java/Kotlin, Mathematica.
+		\item \uline{Lanugages:} \textbf{Rust}, Python, C/C++, CUDA/SYCL/OpenCL/HIP, C\#, Haskell, VHDL, OCaml, Javascript, SQL, Java/Kotlin, Mathematica.
 
 		\item \uline{Platforms/Technology:} Linux (Gentoo, Arch, RHEL/Fedora,
 		Debian/Ubuntu), Windows, MacOS,
-		      BSD, FPGA (Intel, AMD), Git, Docker.
+		      BSD, FPGA (Intel, AMD, Lattice), Git, Docker.
 		\item \uline{Specialties:} GPU programming, functional programming, computer graphics, relational database design and managagement, graph theory, systems administration, DevOps.
 	\end{itemize}
 \end{body}
