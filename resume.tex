@@ -7,6 +7,61 @@
 \usepackage{fontawesome}
 \usepackage{hyperref}
 \usepackage[normalem]{ulem}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{eso-pic}
+
+% --- Document metadata: gives ATS / AI PDF parsers reliable Title, Author,
+% --- language, and keyword hints from the PDF's /Info + XMP streams.
+\hypersetup{
+  pdftitle={Tyler Alamo Port -- Software Engineer Resume},
+  pdfauthor={Tyler Alamo Port},
+  pdfsubject={Software Engineer Resume},
+  pdfcreator={Tyler Alamo Port},
+  pdflang={en-US},
+  pdfkeywords={Software Engineer, Rust, Python, C, C++, CUDA, SYCL, OpenCL, HIP,
+    GPU Programming, High-Performance Computing, HPC, FPGA, Systems Engineering,
+    DevOps, Infrastructure, Tauri, Leptos, WebAssembly, Nix, Terraform,
+    GSSAPI, Kerberos, SQL, PostgreSQL, Caltech},
+  hidelinks
+}
+
+% Keep glyph-to-Unicode mapping intact so copied/extracted text is clean,
+% and never break words across lines (hyphenation confuses naive parsers).
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+
+% --- Subtle technical background -------------------------------------------
+% Drawn as vector graphics in the page background only. It carries NO text,
+% so the PDF text layer (what AI/ATS systems extract) is completely unaffected,
+% and the very low ink density keeps all foreground text fully legible.
+\newcommand{\circuitmotif}{%
+  \begin{scope}[line width=0.45pt, draw=blue!13, fill=blue!13,
+                line cap=round, line join=round]
+    \draw (0,0) -- (1.6,0) -- (1.6,-0.9) -- (2.8,-0.9);
+    \draw (0,-0.5) -- (1.1,-0.5) -- (1.1,-1.7) -- (2.4,-1.7);
+    \draw (0.6,0) -- (0.6,-2.2) -- (2.0,-2.2);
+    \foreach \p in {(0,0),(1.6,0),(1.6,-0.9),(2.8,-0.9),%
+                    (1.1,-1.7),(2.4,-1.7),(0.6,-2.2),(2.0,-2.2)}{%
+      \fill \p circle (1.3pt);
+    }
+  \end{scope}%
+}
+\AddToShipoutPictureBG*{%
+  \begin{tikzpicture}[overlay, remember picture]
+    \begin{scope}
+      \clip (current page.south west) rectangle (current page.north east);
+      \draw[line width=0.2pt, black!5, step=0.55cm]
+        (current page.south west) grid (current page.north east);
+      \begin{scope}[shift={($(current page.north west)+(1.0cm,-1.3cm)$)}]
+        \circuitmotif
+      \end{scope}
+      \begin{scope}[shift={($(current page.south east)+(-1.0cm,1.3cm)$)}, rotate=180]
+        \circuitmotif
+      \end{scope}
+    \end{scope}
+  \end{tikzpicture}%
+}
 
 \leftmargin=0.1in
 \oddsidemargin=0.10in
@@ -125,10 +180,9 @@
 	\textbf{Freelance Engineer and Independent Game Developer} \hfill \emph{October 2024 - Present}\\
 	\vspace*{-6pt}
 	\begin{itemize} \itemsep -2pt
-		\item Developed custom software solutions for clients leveraging expertise in Rust, Python, C++, and GPU acceleration.
-		\item Designed and implemented core systems for an independent game called
-		Rummage. 
-		% \item Engaged in full-stack development, systems integration, and performance optimization for various freelance contracts. % Optional 3rd point if space allows
+		\item Leading a from-scratch Rust rewrite of \texttt{gssproxy}, the GSSAPI/Kerberos proxy daemon and its mechglue interposer: a memory-safe, drop-in replacement across a multi-crate workspace, with FFI to MIT krb5/GSSAPI and Kani formal verification of the security-critical XDR/gssx wire codec.
+		\item Built \href{https://dabney.moe}{dabney.moe} as a Leptos (SSR + WASM) and Tauri v2 multiplatform app sharing one Rust UI crate, with a Nix-driven, multi-cloud (GCP/AWS/Azure) Terraform CI/CD pipeline producing hardened, statically-linked container images.
+		\item Developed custom software solutions for clients in Rust, Python, C++, and GPU acceleration; designed and implemented core systems for an independent game, Rummage.
 	\end{itemize}
 	\vspace*{-6pt}
 
@@ -144,9 +198,7 @@
 	\textbf{Caltech}, \emph{Lecturer and Teaching Assistant in Computer Science} \hfill \emph{April 2018 - June 2022}\\
 	\vspace*{-6pt}
 	\begin{itemize} \itemsep -2pt
-		\item Taught and developed course material for CS179 (GPU Programming), covering Nvidia CUDA for parallel algorithm implementation.
-		\item Taught Rust programming for the CS11 workshop; reimplemented CS24 (Operating Systems) assignments from C to Rust.
-		\item Taught relational database theory and SQL application development in CS121.
+		\item Taught and developed material for CS179 (GPU Programming, Nvidia CUDA), the CS11 Rust workshop (reimplementing CS24 Operating Systems assignments from C to Rust), and CS121 (relational database theory and SQL).
 	\end{itemize}
 	\vspace*{-6pt}
 
@@ -154,7 +206,7 @@
 	\emph{Dec 2019 - August 2020}\\
 	\vspace*{-5pt}
 	\begin{itemize} \itemsep -2pt
-		\item Automated inter-database validation and data entry/verification using C\# and UIPath for healthcare systems (Cactus, National Provider DB).
+		\item Automated inter-database validation and data entry using C\# and UIPath for healthcare systems (Cactus, National Provider DB).
 	\end{itemize}
 	\vspace*{-6pt}
 
@@ -189,8 +241,7 @@
 	\textbf{KarmaFleet}, \emph{Director of Technology} \hfill \emph{January 2015 - September 2016}\\
 	\vspace*{-6pt}
 	\begin{itemize} \itemsep -2pt
-		\item Architected/developed Python/Flask/SQLAlchemy/PostgreSQL web app for 4500+ users; implemented DevOps (Docker, CI, monitoring).
-		\item Managed critical infrastructure (VoIP, forums, chat services).
+		\item Architected/developed Python/Flask/SQLAlchemy/PostgreSQL web app for 4500+ users; implemented DevOps (Docker, CI, monitoring) and managed critical infrastructure (VoIP, forums, chat).
 	\end{itemize}
 	\vspace*{-6pt}
 
