@@ -22,7 +22,8 @@
   pdfkeywords={Software Engineer, Rust, Python, C, C++, CUDA, SYCL, OpenCL, HIP,
     GPU Programming, High-Performance Computing, HPC, FPGA, Systems Engineering,
     DevOps, Infrastructure, Tauri, Leptos, WebAssembly, Nix, Terraform,
-    GSSAPI, Kerberos, SQL, PostgreSQL, Caltech},
+    GSSAPI, Kerberos, SQL, PostgreSQL, Caltech, Elysian Studio, ElyMalloc, ElyLD,
+    Allocator, Linker, ELF, mimalloc, wgpu},
   hidelinks
 }
 
@@ -66,8 +67,8 @@
 \leftmargin=0.1in
 \oddsidemargin=0.10in
 \textwidth=6.0in
-\topmargin=-0.25in
-\textheight=9.35in
+\topmargin=-0.35in
+\textheight=9.55in
 
 \raggedright
 
@@ -154,7 +155,7 @@
 	\textbf{Computer Science}:} \hfill \emph{Jun. 2022}{} \\
 	\vspace{-5pt}
 	\begin{itemize} \itemsep -2pt
-		\item Studied Computer Science focusing on low-level GPU Programming for parallel algorithm acceleration. Taught and developed material for several CS courses including GPU Programming and Rust.
+		\item Focused on low-level GPU programming for parallel algorithm acceleration; taught GPU Programming and Rust.
 	\end{itemize}
 \end{body}
 
@@ -180,9 +181,9 @@
 	\textbf{Freelance Engineer and Independent Game Developer} \hfill \emph{October 2024 - Present}\\
 	\vspace*{-6pt}
 	\begin{itemize} \itemsep -2pt
+		\item Building \href{https://github.com/tyler274/elysian-studio}{Elysian Studio}, \href{https://github.com/tyler274/ElyMalloc}{ElyMalloc}, and \href{https://github.com/tyler274/ElyLD}{ElyLD}: a safe-Rust slicer, allocator, and incremental ELF linker (see Projects).
 		\item Leading a from-scratch Rust rewrite of \texttt{gssproxy}, the GSSAPI/Kerberos proxy daemon and its mechglue interposer: a memory-safe, drop-in replacement across a multi-crate workspace, with FFI to MIT krb5/GSSAPI and Kani formal verification of the security-critical XDR/gssx wire codec.
 		\item Built \href{https://dabney.moe}{dabney.moe} as a Leptos (SSR + WASM) and Tauri v2 multiplatform app sharing one Rust UI crate, with a Nix-driven, multi-cloud (GCP/AWS/Azure) Terraform CI/CD pipeline producing hardened, statically-linked container images.
-		\item Developed custom software solutions for clients in Rust, Python, C++, and GPU acceleration; designed and implemented core systems for an independent game, Rummage.
 	\end{itemize}
 	\vspace*{-6pt}
 
@@ -199,14 +200,6 @@
 	\vspace*{-6pt}
 	\begin{itemize} \itemsep -2pt
 		\item Taught and developed material for CS179 (GPU Programming, Nvidia CUDA), the CS11 Rust workshop (reimplementing CS24 Operating Systems assignments from C to Rust), and CS121 (relational database theory and SQL).
-	\end{itemize}
-	\vspace*{-6pt}
-
-	\textbf{North American Partners in Anesthesia.}, \emph{Software Engineering Intern} \hfill
-	\emph{Dec 2019 - August 2020}\\
-	\vspace*{-5pt}
-	\begin{itemize} \itemsep -2pt
-		\item Automated inter-database validation and data entry using C\# and UIPath for healthcare systems (Cactus, National Provider DB).
 	\end{itemize}
 	\vspace*{-6pt}
 
@@ -231,13 +224,6 @@
 	\end{itemize}
 	\vspace*{-6pt}
 
-	\textbf{DoubleVerify Inc.}, \emph{Bot Fraud Analyst Intern} \hfill \emph{June 2015 - September 2015}\\
-	\vspace*{-6pt}
-	\begin{itemize} \itemsep -2pt
-		\item Analyzed malware network traffic to identify botnet ad fraud patterns; researched evolving botnet tactics (traffic exchanges, YouTube fraud).
-	\end{itemize}
-	\vspace*{-6pt}
-
 	\textbf{KarmaFleet}, \emph{Director of Technology} \hfill \emph{January 2015 - September 2016}\\
 	\vspace*{-6pt}
 	\begin{itemize} \itemsep -2pt
@@ -245,34 +231,35 @@
 	\end{itemize}
 	\vspace*{-6pt}
 
-	\textbf{GLO Gaming}, \emph{Office IT, Director of Technology} \hfill \emph{January 2012 - September 2014}\\
-	\vspace*{-6pt}
-	\begin{itemize} \itemsep -2pt
-		\item Managed IT infrastructure: network security, backups, user support, SalesForce CRM integration.
-	\end{itemize}
-	\vspace*{-6pt}
-
-	\smallskip
-	\vspace*{-11pt}
-	% \vspace*{-5pt}
-	\smallskip
 \end{body}
 
+\vspace*{-6pt}
 
-\smallskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Projects
+\header{Projects}
+\begin{body}
+	\vspace{8pt}
+	\begin{itemize} \itemsep -2pt
+		\item \textbf{\href{https://github.com/tyler274/elysian-studio}{Elysian Studio}}: AGPL safe-Rust rewrite of Bambu Studio; integer-deterministic CPU slicing, wgpu Vulkan compute contours, iced UI, and open LAN printer I/O.
+		\item \textbf{\href{https://github.com/tyler274/ElyMalloc}{ElyMalloc}}: Pure-Rust drop-in for Microsoft mimalloc v3.5.2 (\texttt{libmimalloc.so.3}, \texttt{mi\_*}) with always-on \texttt{MI\_SECURE} mitigations, WASM \texttt{GlobalAlloc}, Kani proofs, and a NixOS malloc provider.
+		\item \textbf{\href{https://github.com/tyler274/ElyLD}{ElyLD}}: GNU-ld-compatible incremental ELF linker (Wild fork); \texttt{--incremental} in-place patching, Linux kernel \texttt{vmlinux}, glibc DSOs, and NixOS stdenv linker.
+	\end{itemize}
+\end{body}
+
+\vspace*{-8pt}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Skills
 \header{Skills}
-\smallskip
 \begin{body}
-	\vspace{10pt}
+	\vspace{8pt}
 	\begin{itemize} \itemsep -2pt
 		\item \uline{Languages:} \textbf{Rust}, \textbf{Python}, \textbf{C/C++},
 		\textbf{CUDA/SYCL/OpenCL/HIP (GPU Programming)}, SQL, C\#, Java/Kotlin, Typescript/Javascript,
 		Haskell, OCaml, VHDL, Mathematica.
 		\item \uline{Platforms/Technology:} Linux (Gentoo, Arch, RHEL/Fedora, Debian/Ubuntu), HPC Environments, FPGAs (Intel, AMD), Docker, Git, Windows, MacOS, BSD.
-		\item \uline{Specialties:} \textbf{GPU Computing \& Parallelization}, \textbf{Systems Engineering \& Administration}, \textbf{DevOps \& Infrastructure Management}, High-Performance Computing (HPC), AI/Machine Learning (Pytorch), Low-Level Programming, Relational Database Design (SQL, PostgreSQL), Functional Programming, Computer Graphics.
+		\item \uline{Specialties:} \textbf{GPU Computing \& Parallelization}, \textbf{Systems Engineering \& Administration}, \textbf{DevOps \& Infrastructure Management}, High-Performance Computing (HPC), Memory Allocators, ELF Linkers, AI/Machine Learning (Pytorch), Low-Level Programming, Relational Database Design (SQL, PostgreSQL), Functional Programming, Computer Graphics.
 	\end{itemize}
 \end{body}
 

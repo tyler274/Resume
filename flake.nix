@@ -15,11 +15,15 @@
       in
       {
         devShells.default = pkgs.mkShell {
-          packages = [ pkgs.tectonic ];
+          packages = [
+            pkgs.tectonic
+            pkgs.python3
+          ];
 
           shellHook = ''
             echo "Resume dev shell (Tectonic)"
             echo "  $(tectonic --version)"
+            echo "  $(python3 --version)"
             echo ""
             echo "  build: tectonic resume.tex"
           '';
