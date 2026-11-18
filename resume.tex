@@ -22,8 +22,10 @@
   pdfkeywords={Software Engineer, Rust, Python, C, C++, CUDA, SYCL, OpenCL, HIP,
     GPU Programming, High-Performance Computing, HPC, FPGA, Systems Engineering,
     Image Processing, Imaging, Computer Vision, React, Docker,
-    DevOps, Infrastructure, Tauri, Leptos, WebAssembly, Nix, Terraform,
-    GSSAPI, Kerberos, SQL, PostgreSQL, Caltech, Elysian Studio, ElyMalloc, ElyLD,
+    DevOps, Infrastructure, Tauri, Leptos, Dioxus, WebAssembly, Nix, Terraform,
+    OpenTofu, GCP, SeaORM, pgvector, Redis, OpenTelemetry, Datadog, TLA+, Kani,
+    HealthKit, Health Connect, GSSAPI, Kerberos, SQL, PostgreSQL, Caltech,
+    Coda Health, coda-rust, Elysian Studio, ElyMalloc, ElyLD,
     Allocator, Linker, ELF, mimalloc, wgpu},
   hidelinks
 }
@@ -67,9 +69,9 @@
 
 \leftmargin=0.1in
 \oddsidemargin=0.10in
-\textwidth=6.0in
-\topmargin=-0.35in
-\textheight=9.55in
+\textwidth=6.05in
+\topmargin=-0.38in
+\textheight=9.65in
 
 \raggedright
 
@@ -156,7 +158,7 @@
 	\textbf{Computer Science}:} \hfill \emph{Jun. 2022}{} \\
 	\vspace{-5pt}
 	\begin{itemize} \itemsep -2pt
-		\item Focused on low-level GPU programming for parallel algorithm acceleration; taught GPU Programming and Rust.
+		\item Focused on low-level GPU parallel algorithm acceleration; taught GPU Programming (CUDA) and Rust.
 	\end{itemize}
 \end{body}
 
@@ -167,16 +169,22 @@
 % Experience
 \header{Work and Experience}
 \begin{body}
-	\vspace{10pt} % Reduced space
+	\vspace{8pt} % Reduced space
+
+	\textbf{Coda Health}, \emph{Senior System Software Engineer} \hfill \emph{October 2026 - November 2026}\\
+	\vspace*{-6pt}
+	\begin{itemize} \itemsep -2pt
+		\item Engineered a 37-crate Rust workspace (\href{https://github.com/tyler274/coda-rust}{coda-rust}: Dioxus/WASM, Axum, SeaORM/PostgreSQL + \texttt{pgvector}, Redis SSE fan-out, HealthKit/Health Connect) for clinical workflows.
+		\item Built a bounded LLM tool harness, offline BGE encoder, FHIR R4 / EHR adapters, Chrome connector, and PubMed pipeline with TLA+ checks, Postgres recovery, and Chromium E2E tests.
+		\item Automated Nix distroless OCI images, 9 OpenTofu GCP roots (Cloud Run, GKE, Cloud SQL, IAP, Doppler), OpenTelemetry/Datadog/Langfuse telemetry, and Firecracker/\texttt{act} sandboxed CI.
+	\end{itemize}
+	\vspace*{-6pt}
 
 	\textbf{Tivara, New York City}, \emph{Founding Software Engineer} \hfill \emph{May 2025 - August 2025}\\
 	\vspace*{-6pt}
 	\begin{itemize} \itemsep -2pt
-		\item Oversaw end-to-end development, and launched the product pilots, of AI voice agents for patient intake and
-		scheduling for two clinical networks situated across the United States.
-		\item Full-stack development of the clinician-facing product in TypeScript, React, and Node.js: intake and
-		scheduling UI, APIs, and pilot infrastructure and operations.
-		% \item Engaged in full-stack development, systems integration, and performance optimization for various freelance contracts. % Optional 3rd point if space allows
+		\item Oversaw end-to-end development and pilot launch of AI voice agents for patient intake and scheduling across two U.S. clinical networks.
+		\item Full-stack development of the clinician-facing product in TypeScript, React, and Node.js: intake/scheduling UI, APIs, and pilot operations.
 	\end{itemize}
 	\vspace*{-6pt}
 
@@ -184,52 +192,51 @@
 	\vspace*{-6pt}
 	\begin{itemize} \itemsep -2pt
 		\item Building \href{https://github.com/tyler274/elysian-studio}{Elysian Studio}, \href{https://github.com/tyler274/ElyMalloc}{ElyMalloc}, and \href{https://github.com/tyler274/ElyLD}{ElyLD}: a safe-Rust slicer, allocator, and incremental ELF linker (see Projects).
-		\item Leading a from-scratch Rust rewrite of \texttt{gssproxy}, the GSSAPI/Kerberos proxy daemon and its mechglue interposer: a memory-safe, drop-in replacement across a multi-crate workspace, with FFI to MIT krb5/GSSAPI and Kani formal verification of the security-critical XDR/gssx wire codec.
-		\item Built \href{https://dabney.moe}{dabney.moe} as a Leptos (SSR + WASM) and Tauri v2 multiplatform app sharing one Rust UI crate. Leptos is a reactive component framework similar to Vue.js: components, fine-grained reactivity, and server rendering. Nix-driven multi-cloud (GCP/AWS/Azure) Terraform CI/CD publishes hardened, statically linked Docker images.
+		\item Leading a from-scratch Rust rewrite of \texttt{gssproxy} (GSSAPI/Kerberos daemon and mechglue interposer) with MIT krb5/GSSAPI FFI and Kani proofs of the XDR/gssx wire codec.
+		\item Built \href{https://dabney.moe}{dabney.moe} in Leptos (SSR + WASM) and Tauri v2 sharing one Rust UI crate, with Nix multi-cloud (GCP/AWS/Azure) Terraform CI/CD shipping static Docker images.
 	\end{itemize}
 	\vspace*{-6pt}
 
 	\textbf{Carl Zeiss AG., Germany}, \emph{System Software Engineer} \hfill \emph{March 2023 - March 2024}\\
 	\vspace*{-6pt} % Reduced space
 	\begin{itemize} \itemsep -2pt % Ensure negative itemsep
-		\item Led systems engineering for imaging and computer-vision workloads on GPUs and FPGAs, using CUDA C++, SYCL, and Python to accelerate scientific image processing and machine-learning inference.
-		\item Managed master's students and interns on GPU/FPGA programming and real-time imaging-pipeline optimization.
-		\item Developed, deployed, and tested FPGA implementations of PyTorch models for real-time image-signal-processing and computer-vision pipelines.
+		\item Led systems engineering for GPU/FPGA imaging and computer-vision workloads (CUDA C++, SYCL, Python) and mentored master's students and interns on real-time pipeline optimization.
+		\item Developed, deployed, and tested FPGA implementations of PyTorch models for real-time ISP and computer-vision pipelines.
 	\end{itemize}
 	\vspace*{-6pt}
 
 	\textbf{Caltech}, \emph{Lecturer and Teaching Assistant in Computer Science} \hfill \emph{April 2018 - June 2022}\\
 	\vspace*{-6pt}
 	\begin{itemize} \itemsep -2pt
-		\item Taught and developed material for CS179 (GPU Programming, Nvidia CUDA), the CS11 Rust workshop (reimplementing CS24 Operating Systems assignments from C to Rust), and CS121 (relational database theory and SQL).
+		\item Taught and developed material for CS179 (Nvidia CUDA GPU Programming), the CS11 Rust workshop (C-to-Rust CS24 OS ports), and CS121 (relational databases and SQL).
 	\end{itemize}
 	\vspace*{-6pt}
 
 	\textbf{Tinder Inc.}, \emph{Software Engineering Intern} \hfill \emph{June 2018 - August 2018}\\
 	\vspace*{-5pt}
 	\begin{itemize} \itemsep -2pt
-		\item Developed Prometheus/Grafana extension (Python, Puppet) to trace microservice dependencies and identify root causes of service degradation.
+		\item Built Prometheus/Grafana tooling (Python, Puppet) tracing microservice dependencies and root causes of service degradation.
 	\end{itemize}
 	\vspace*{-6pt}
 
 	\textbf{NASA Jet Propulsion Lab}, \emph{Software Engineering Intern} \hfill \emph{January 2018 - June 2018}\\
 	\vspace*{-5pt}
 	\begin{itemize} \itemsep -2pt
-		\item Accelerated Europa Lander orbital calculations via MATLAB-to-CUDA C++ reimplementation for large-scale parallel simulation/visualization.
+		\item Accelerated Europa Lander orbital simulations via MATLAB-to-CUDA C++ parallelization and visualization.
 	\end{itemize}
 	\vspace*{-6pt}
 
 	\textbf{Caltech IMSS}, \emph{IMSS Representative and UGCS Systems Administrator} \hfill \emph{January 2016 - June 2022}\\
 	\vspace*{-6pt}
 	\begin{itemize} \itemsep -2pt
-		\item Administered 150TB storage array and compute resources, ensuring high availability/performance for thousands of users (Linux environment).
+		\item Administered 150TB storage array and high-availability Linux compute cluster for thousands of campus users.
 	\end{itemize}
 	\vspace*{-6pt}
 
 	\textbf{KarmaFleet}, \emph{Director of Technology} \hfill \emph{January 2015 - September 2016}\\
 	\vspace*{-6pt}
 	\begin{itemize} \itemsep -2pt
-		\item Architected/developed Python/Flask/SQLAlchemy/PostgreSQL web app for 4500+ users; implemented DevOps (Docker, CI, monitoring) and managed critical infrastructure (VoIP, forums, chat).
+		\item Architected Python/Flask/PostgreSQL web app for 4500+ users; managed Docker, CI, monitoring, VoIP, and chat.
 	\end{itemize}
 	\vspace*{-6pt}
 
@@ -241,8 +248,9 @@
 % Projects
 \header{Projects}
 \begin{body}
-	\vspace{8pt}
+	\vspace{7pt}
 	\begin{itemize} \itemsep -2pt
+		\item \textbf{\href{https://github.com/tyler274/coda-rust}{Coda}}: Unlicense 37-crate Rust clinical workspace (Dioxus/WASM, Axum, SeaORM/PostgreSQL + \texttt{pgvector}, bounded LLM harness, FHIR/EHR adapters, Chrome connector, iOS/Android bridges, Nix OCI, OpenTofu GCP).
 		\item \textbf{\href{https://github.com/tyler274/elysian-studio}{Elysian Studio}}: AGPL safe-Rust rewrite of Bambu Studio; integer-deterministic CPU slicing, wgpu Vulkan compute contours, iced UI, and open LAN printer I/O.
 		\item \textbf{\href{https://github.com/tyler274/ElyMalloc}{ElyMalloc}}: Pure-Rust drop-in for Microsoft mimalloc v3.5.2 (\texttt{libmimalloc.so.3}, \texttt{mi\_*}) with always-on \texttt{MI\_SECURE} mitigations, WASM \texttt{GlobalAlloc}, Kani proofs, and a NixOS malloc provider.
 		\item \textbf{\href{https://github.com/tyler274/ElyLD}{ElyLD}}: GNU-ld-compatible incremental ELF linker (Wild fork); \texttt{--incremental} in-place patching, Linux kernel \texttt{vmlinux}, glibc DSOs, and NixOS stdenv linker.
@@ -255,13 +263,13 @@
 % Skills
 \header{Skills}
 \begin{body}
-	\vspace{8pt}
+	\vspace{7pt}
 	\begin{itemize} \itemsep -2pt
 		\item \uline{Languages:} \textbf{Rust}, \textbf{Python}, \textbf{C/C++},
-		\textbf{CUDA/SYCL/OpenCL/HIP (GPU Programming)}, SQL, C\#, Java/Kotlin, TypeScript/JavaScript, React,
-		Haskell, OCaml, VHDL, Mathematica.
-		\item \uline{Platforms/Technology:} Linux (Gentoo, Arch, RHEL/Fedora, Debian/Ubuntu), HPC Environments, FPGAs (Intel, AMD), Docker, Git, Windows, MacOS, BSD.
-		\item \uline{Specialties:} \textbf{GPU Computing \& Parallelization}, \textbf{Image Processing, Imaging \& Computer Vision}, \textbf{Systems Engineering \& Administration}, \textbf{DevOps \& Infrastructure Management (Docker)}, High-Performance Computing (HPC), Memory Allocators, ELF Linkers, AI/Machine Learning (PyTorch), React, Low-Level Programming, Relational Database Design (SQL, PostgreSQL), Functional Programming, Computer Graphics.
+		\textbf{CUDA/SYCL/OpenCL/HIP (GPU Programming)}, SQL, Swift, Java/Kotlin, TypeScript/JavaScript, React, C\#,
+		Haskell, OCaml, VHDL.
+		\item \uline{Platforms/Technology:} Linux (Gentoo/Arch/RHEL/Debian), Dioxus, Leptos/WASM, Tauri, PostgreSQL (\texttt{pgvector}), Redis, Nix, OpenTofu/Terraform, GCP, Docker, HPC, FPGAs (Intel, AMD), Git, Windows, macOS, BSD.
+		\item \uline{Specialties:} \textbf{GPU Computing \& Parallelization}, \textbf{Systems Engineering}, \textbf{DevOps \& Cloud Infrastructure (GCP, Nix, OpenTofu)}, \textbf{Image Processing \& Computer Vision}, LLM Agent Harnesses, Formal Verification (TLA+, Kani), OpenTelemetry/Datadog, HPC, Memory Allocators, ELF Linkers, AI/ML (PyTorch), Relational Databases.
 	\end{itemize}
 \end{body}
 
