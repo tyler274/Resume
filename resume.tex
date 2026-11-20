@@ -23,9 +23,9 @@
     GPU Programming, High-Performance Computing, HPC, FPGA, Systems Engineering,
     Image Processing, Imaging, Computer Vision, React, Docker,
     DevOps, Infrastructure, Tauri, Leptos, Dioxus, WebAssembly, Nix, Terraform,
-    OpenTofu, GCP, SeaORM, pgvector, Redis, OpenTelemetry, Datadog, TLA+, Kani,
-    HealthKit, Health Connect, GSSAPI, Kerberos, SQL, PostgreSQL, Caltech,
-    Coda Health, coda-rust, Elysian Studio, ElyMalloc, ElyLD,
+    OpenTofu, GCP, SeaORM, pgvector, Valkey, Redis, OpenTelemetry, Datadog, TLA+, Kani,
+    FHIR, PKCE, Tesseract, HealthKit, Health Connect, GSSAPI, Kerberos, SQL, PostgreSQL, Caltech,
+    Coda Health, coda-rust, Chords, Duet, Elysian Studio, ElyMalloc, ElyLD,
     Allocator, Linker, ELF, mimalloc, wgpu},
   hidelinks
 }
@@ -174,9 +174,9 @@
 	\textbf{Coda Health}, \emph{Senior System Software Engineer} \hfill \emph{October 2026 - November 2026}\\
 	\vspace*{-6pt}
 	\begin{itemize} \itemsep -2pt
-		\item Engineered a 37-crate Rust workspace (\href{https://github.com/tyler274/coda-rust}{coda-rust}: Dioxus/WASM, Axum, SeaORM/PostgreSQL + \texttt{pgvector}, Redis SSE fan-out, HealthKit/Health Connect) for clinical workflows.
-		\item Built a bounded LLM tool harness, offline BGE encoder, FHIR R4 / EHR adapters, Chrome connector, and PubMed pipeline with TLA+ checks, Postgres recovery, and Chromium E2E tests.
-		\item Automated Nix distroless OCI images, 9 OpenTofu GCP roots (Cloud Run, GKE, Cloud SQL, IAP, Doppler), OpenTelemetry/Datadog/Langfuse telemetry, and Firecracker/\texttt{act} sandboxed CI.
+		\item Engineered a 37-crate Rust workspace (\href{https://github.com/tyler274/coda-rust}{coda-rust}: Dioxus/WASM, Axum, SeaORM/PostgreSQL + \texttt{pgvector}, Valkey SSE, HealthKit/Health Connect) for Chords and Duet.
+		\item Built a bounded LLM tool harness, BGE encoder, Poppler/Tesseract OCR, PKCE FHIR R4 / EHR / Chrome adapters, and Connected Care sync with TLA+, Postgres, and Chromium E2E proofs.
+		\item Automated Nix OCI images, 9 OpenTofu GCP roots (Cloud Run, GKE, Cloud SQL, IAP, Doppler), OpenTelemetry/Datadog/Langfuse, Firecracker CI, and WASM demo at \href{https://dabney.moe/coda/}{dabney.moe/coda}.
 	\end{itemize}
 	\vspace*{-6pt}
 
@@ -250,7 +250,7 @@
 \begin{body}
 	\vspace{7pt}
 	\begin{itemize} \itemsep -2pt
-		\item \textbf{\href{https://github.com/tyler274/coda-rust}{Coda}}: Unlicense 37-crate Rust clinical workspace (Dioxus/WASM, Axum, SeaORM/PostgreSQL + \texttt{pgvector}, bounded LLM harness, FHIR/EHR adapters, Chrome connector, iOS/Android bridges, Nix OCI, OpenTofu GCP).
+		\item \textbf{\href{https://dabney.moe/coda/}{Coda}} (\href{https://github.com/tyler274/coda-rust}{GitHub}): Unlicense 37-crate Rust clinical workspace (Chords clinician site, Duet patient app, Connected Care, PKCE FHIR/OCR, LLM harness, TLA+/Chromium proofs, live WASM SQLite demo).
 		\item \textbf{\href{https://github.com/tyler274/elysian-studio}{Elysian Studio}}: AGPL safe-Rust rewrite of Bambu Studio; integer-deterministic CPU slicing, wgpu Vulkan compute contours, iced UI, and open LAN printer I/O.
 		\item \textbf{\href{https://github.com/tyler274/ElyMalloc}{ElyMalloc}}: Pure-Rust drop-in for Microsoft mimalloc v3.5.2 (\texttt{libmimalloc.so.3}, \texttt{mi\_*}) with always-on \texttt{MI\_SECURE} mitigations, WASM \texttt{GlobalAlloc}, Kani proofs, and a NixOS malloc provider.
 		\item \textbf{\href{https://github.com/tyler274/ElyLD}{ElyLD}}: GNU-ld-compatible incremental ELF linker (Wild fork); \texttt{--incremental} in-place patching, Linux kernel \texttt{vmlinux}, glibc DSOs, and NixOS stdenv linker.
@@ -268,7 +268,7 @@
 		\item \uline{Languages:} \textbf{Rust}, \textbf{Python}, \textbf{C/C++},
 		\textbf{CUDA/SYCL/OpenCL/HIP (GPU Programming)}, SQL, Swift, Java/Kotlin, TypeScript/JavaScript, React, C\#,
 		Haskell, OCaml, VHDL.
-		\item \uline{Platforms/Technology:} Linux (Gentoo/Arch/RHEL/Debian), Dioxus, Leptos/WASM, Tauri, PostgreSQL (\texttt{pgvector}), Redis, Nix, OpenTofu/Terraform, GCP, Docker, HPC, FPGAs (Intel, AMD), Git, Windows, macOS, BSD.
+		\item \uline{Platforms/Technology:} Linux (Gentoo/Arch/RHEL/Debian), Dioxus, Leptos/WASM, Tauri, PostgreSQL (\texttt{pgvector}), Valkey/Redis, Nix, OpenTofu/Terraform, GCP, Docker, HPC, FPGAs (Intel, AMD), Git, Windows, macOS, BSD.
 		\item \uline{Specialties:} \textbf{GPU Computing \& Parallelization}, \textbf{Systems Engineering}, \textbf{DevOps \& Cloud Infrastructure (GCP, Nix, OpenTofu)}, \textbf{Image Processing \& Computer Vision}, LLM Agent Harnesses, Formal Verification (TLA+, Kani), OpenTelemetry/Datadog, HPC, Memory Allocators, ELF Linkers, AI/ML (PyTorch), Relational Databases.
 	\end{itemize}
 \end{body}
