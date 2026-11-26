@@ -25,7 +25,7 @@
     DevOps, Infrastructure, Tauri, Leptos, Dioxus, WebAssembly, Nix, Terraform,
     OpenTofu, GCP, SeaORM, pgvector, Valkey, Redis, OpenTelemetry, Datadog, TLA+, Kani,
     FHIR, PKCE, Tesseract, HealthKit, Health Connect, GSSAPI, Kerberos, SQL, PostgreSQL, Caltech,
-    Coda Health, coda-rust, Chords, Duet, Elysian Studio, ElyMalloc, ElyLD,
+    Dabney.moe, Curie, Coda Health, Founding Senior Software Engineer, Clinical Workspace, Elysian Studio, ElyMalloc, ElyLD,
     Allocator, Linker, ELF, mimalloc, wgpu},
   hidelinks
 }
@@ -171,12 +171,12 @@
 \begin{body}
 	\vspace{8pt} % Reduced space
 
-	\textbf{Coda Health}, \emph{Senior System Software Engineer} \hfill \emph{October 2026 - November 2026}\\
+	\textbf{Coda Health}, \emph{Founding Senior Software Engineer} \hfill \emph{October 2026 - November 2026}\\
 	\vspace*{-6pt}
 	\begin{itemize} \itemsep -2pt
-		\item Engineered a 37-crate Rust workspace (\href{https://github.com/tyler274/coda-rust}{coda-rust}: Dioxus/WASM, Axum, SeaORM/PostgreSQL + \texttt{pgvector}, Valkey SSE, HealthKit/Health Connect) for Chords and Duet.
-		\item Built a bounded LLM tool harness, BGE encoder, Poppler/Tesseract OCR, PKCE FHIR R4 / EHR / Chrome adapters, and Connected Care sync with TLA+, Postgres, and Chromium E2E proofs.
-		\item Automated Nix OCI images, 9 OpenTofu GCP roots (Cloud Run, GKE, Cloud SQL, IAP, Doppler), OpenTelemetry/Datadog/Langfuse, Firecracker CI, and WASM demo at \href{https://dabney.moe/coda/}{dabney.moe/coda}.
+		\item Built Coda Health's Rust clinical platform to MVP in under two months before moving on to my own vision: clinician and patient web apps, multi-tenant Postgres, real-time streaming, and mobile health sync.
+		\item Engineered the tool-calling AI assistant, local semantic search, medical document extraction, health-portal and browser integrations, and care workflows verified with TLA+ formal models and browser tests.
+		\item Automated reproducible Nix containers, Google Cloud deployments in OpenTofu (Cloud Run, Kubernetes, Cloud SQL), OpenTelemetry/Datadog observability, and Firecracker-sandboxed CI.
 	\end{itemize}
 	\vspace*{-6pt}
 
@@ -192,7 +192,7 @@
 	\vspace*{-6pt}
 	\begin{itemize} \itemsep -2pt
 		\item Building \href{https://github.com/tyler274/elysian-studio}{Elysian Studio}, \href{https://github.com/tyler274/ElyMalloc}{ElyMalloc}, and \href{https://github.com/tyler274/ElyLD}{ElyLD}: a safe-Rust slicer, allocator, and incremental ELF linker (see Projects).
-		\item Leading a from-scratch Rust rewrite of \texttt{gssproxy} (GSSAPI/Kerberos daemon and mechglue interposer) with MIT krb5/GSSAPI FFI and Kani proofs of the XDR/gssx wire codec.
+		\item Wrote a from-scratch Rust rewrite of \texttt{gssproxy} (GSSAPI/Kerberos daemon and mechglue interposer) with MIT krb5/GSSAPI FFI and Kani proofs of the XDR/gssx wire codec.
 		\item Built \href{https://dabney.moe}{dabney.moe} in Leptos (SSR + WASM) and Tauri v2 sharing one Rust UI crate, with Nix multi-cloud (GCP/AWS/Azure) Terraform CI/CD shipping static Docker images.
 	\end{itemize}
 	\vspace*{-6pt}
@@ -250,7 +250,7 @@
 \begin{body}
 	\vspace{7pt}
 	\begin{itemize} \itemsep -2pt
-		\item \textbf{\href{https://dabney.moe/coda/}{Coda}} (\href{https://github.com/tyler274/coda-rust}{GitHub}): Unlicense 37-crate Rust clinical workspace (Chords clinician site, Duet patient app, Connected Care, PKCE FHIR/OCR, LLM harness, TLA+/Chromium proofs, live WASM SQLite demo).
+		\item \textbf{\href{https://dabney.moe/clinical}{Curie (Dabney.moe)}} (\href{https://dabney.moe/clinical/patient}{Demo}): Clean-room Rust clinical suite: medical portal sign-in, portable health passport, automated HIPAA records release, grounded AI chat, and glucose analytics.
 		\item \textbf{\href{https://github.com/tyler274/elysian-studio}{Elysian Studio}}: AGPL safe-Rust rewrite of Bambu Studio; integer-deterministic CPU slicing, wgpu Vulkan compute contours, iced UI, and open LAN printer I/O.
 		\item \textbf{\href{https://github.com/tyler274/ElyMalloc}{ElyMalloc}}: Pure-Rust drop-in for Microsoft mimalloc v3.5.2 (\texttt{libmimalloc.so.3}, \texttt{mi\_*}) with always-on \texttt{MI\_SECURE} mitigations, WASM \texttt{GlobalAlloc}, Kani proofs, and a NixOS malloc provider.
 		\item \textbf{\href{https://github.com/tyler274/ElyLD}{ElyLD}}: GNU-ld-compatible incremental ELF linker (Wild fork); \texttt{--incremental} in-place patching, Linux kernel \texttt{vmlinux}, glibc DSOs, and NixOS stdenv linker.
