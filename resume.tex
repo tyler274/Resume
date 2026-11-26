@@ -174,9 +174,9 @@
 	\textbf{Coda Health}, \emph{Founding Senior Software Engineer} \hfill \emph{October 2026 - November 2026}\\
 	\vspace*{-6pt}
 	\begin{itemize} \itemsep -2pt
-		\item Built Coda Health's Rust clinical platform to MVP in under two months before moving on to my own vision (37 crates: WASM, Axum, Postgres/\texttt{pgvector} RLS, Valkey SSE, HealthKit/Health Connect).
-		\item Engineered its bounded LLM tool harness, BGE encoder, Poppler/Tesseract OCR, PKCE FHIR R4 / EHR / Chrome adapters, and synced care workflows with TLA+, Postgres, and Chromium E2E proofs.
-		\item Automated Nix OCI images, 9 OpenTofu GCP roots (Cloud Run, GKE, Cloud SQL, IAP, Doppler), OpenTelemetry/Datadog/Langfuse observability, and Firecracker sandboxed CI.
+		\item Built Coda Health's Rust clinical platform to MVP in under two months before moving on to my own vision: clinician and patient web apps, multi-tenant Postgres, real-time streaming, and mobile health sync.
+		\item Engineered the tool-calling AI assistant, local semantic search, medical document extraction, health-portal and browser integrations, and care workflows verified with TLA+ formal models and browser tests.
+		\item Automated reproducible Nix containers, Google Cloud deployments in OpenTofu (Cloud Run, Kubernetes, Cloud SQL), OpenTelemetry/Datadog observability, and Firecracker-sandboxed CI.
 	\end{itemize}
 	\vspace*{-6pt}
 
@@ -250,7 +250,7 @@
 \begin{body}
 	\vspace{7pt}
 	\begin{itemize} \itemsep -2pt
-		\item \textbf{\href{https://dabney.moe/clinical}{Curie (Dabney.moe)}} (\href{https://dabney.moe/clinical/patient}{Demo}): Clean-room Rust/WASM clinical suite (SMART FHIR R4 portals, portable health passport, automated HIPAA ROI, agentic chat harness, CGM analytics).
+		\item \textbf{\href{https://dabney.moe/clinical}{Curie (Dabney.moe)}} (\href{https://dabney.moe/clinical/patient}{Demo}): Clean-room Rust clinical suite: medical portal sign-in, portable health passport, automated HIPAA records release, grounded AI chat, and glucose analytics.
 		\item \textbf{\href{https://github.com/tyler274/elysian-studio}{Elysian Studio}}: AGPL safe-Rust rewrite of Bambu Studio; integer-deterministic CPU slicing, wgpu Vulkan compute contours, iced UI, and open LAN printer I/O.
 		\item \textbf{\href{https://github.com/tyler274/ElyMalloc}{ElyMalloc}}: Pure-Rust drop-in for Microsoft mimalloc v3.5.2 (\texttt{libmimalloc.so.3}, \texttt{mi\_*}) with always-on \texttt{MI\_SECURE} mitigations, WASM \texttt{GlobalAlloc}, Kani proofs, and a NixOS malloc provider.
 		\item \textbf{\href{https://github.com/tyler274/ElyLD}{ElyLD}}: GNU-ld-compatible incremental ELF linker (Wild fork); \texttt{--incremental} in-place patching, Linux kernel \texttt{vmlinux}, glibc DSOs, and NixOS stdenv linker.
